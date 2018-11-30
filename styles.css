@@ -1,0 +1,243 @@
+body{
+    font-family: roboto, sans-serif;
+    width: 20em;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    background: #675c53;
+    top: 0;
+    position: absolute;
+    display: inline;
+    margin-left: -1em;
+    padding-right: 1em;
+    position: fixed;
+    z-index: 5;
+}
+
+header > h1 {
+    font-size: 1.5em;
+    padding-left: 1em;
+    color: white;
+    float: left;
+}
+
+header > nav > a {
+    float: right;
+/*  background: blue;*/
+}
+
+header > nav > a > img {
+    padding-top: 0.5em;
+    width: 50%;
+}
+
+header > form > img{
+    width: 100%;
+}
+
+header > form{
+/*    background: green;*/
+    padding-top: 0.5em;
+    padding-right: 2em;
+    padding-left: 1em;
+    float: right;
+}
+
+header > form > input {
+       visibility: hidden;
+}
+
+section {
+    width: 20em;
+    margin: 2em;
+    padding: 2em;
+    border: 1px solid green;
+}
+
+section:first-of-type{
+    border-radius: 0em 0.5em 0.5em 0em;
+    border:none;
+    margin: 1em;
+    margin-left: 0em;
+    margin-bottom: 0em;
+    padding: 1em;
+    background: white;
+}
+
+body > form:first-of-type /* verhaal vinden*/ {
+    background: #e7772b;
+    width: 100%;
+    padding-top: 4em;
+    padding-right: 4.5em;
+    padding-bottom: 1em;
+    margin-left: -1em;
+}
+
+form > section > h4{
+    background: white;
+    font-size: 0.8em;
+    font-weight: 700;
+    padding: 0.5em;
+    padding-left: 2em;
+    margin-left: -1em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    color: #e7772b
+}
+
+form > section > h2{
+    background: white;
+    font-size: 1.2em;
+    font-weight: 800;
+    padding: 0.5em;
+    padding-top: 0.1em;
+    padding-left: 2em;
+    margin-left: -1em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+form > section > button {   /*filteren bovenaan*/
+    font-size: 1em;
+    width: 15em;
+    text-align: left;
+    padding: 0.5em;
+    padding-left: 0em;
+    padding-bottom: 0.1em;
+    margin-left: 1em;
+    border: 0px;
+    border-bottom: 1px solid #8d857e;
+}
+
+form > p{
+    font-size: 0.8em;
+    font-weight: 100;
+    width: 20em;
+    text-align: left;
+    color: white;
+    padding: 0.5em;
+    padding-left: 1em;
+    margin-left: 1em;
+    margin-top: 0.1em;
+    border: 0px;
+    border-radius: 0em 0em 0.5em 0.5em;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+fieldset {
+    display: none;
+}
+
+form > button /*sorteren knop*/{
+    background: rgb(214, 206, 198);
+    font-size: 1em;
+    bottom: 15em;
+    right: -3em;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    position: relative;
+    float: right;
+    z-index: 4;
+}
+
+form > bottom:hover {
+    color: rgb(231, 119, 43);
+}
+
+form input {
+    display: none;
+}
+
+main > h2:first-of-type {
+    width: 100%;
+    font-size: 1.2em;
+    background: rgb(241, 241, 241);
+    padding-right: 2.6em;
+    padding-bottom: 10em;
+    padding-left: 1.5em;
+    padding-top: 1em;
+    margin-top: 0;
+    margin-left: -1em;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+main > h2 {
+    width: 100%;
+    font-size: 1.2em;
+    padding-right: 2.6em;
+    padding-bottom: 10em;
+    padding-left: 1.5em;
+    padding-top: 1em;
+    margin-top: 0;
+    margin-left: -1em;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+article a > footer {
+    width: 10em;
+    height: 10em;
+    background: white;
+    position: relative;
+    z-index: 3;
+    float: right;
+    top: -12em;
+    margin-right: -2em;
+    padding: 1em;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    box-shadow: 0 0.8em 0.8em 0 rgba(103, 92, 83, 0.3);
+}
+
+article {
+    width: 100%;
+    width: calc(100% + 2em);
+    padding: 1em;
+    background: white;
+    top: -11em;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    box-shadow: 0 0.8em 0.8em 0 rgba(103, 92, 83, 0.3);
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+
+article > a > img:first-of-type{
+    width: 100%;
+    background: white;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: black;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+p {
+    font-size: 1em;
+    color: black;
+}
+
+footer > a {
+    color: blue;
+    text-decoration-line: none;
+    text-align: left;
+    padding-bottom: 0.5em;
+    margin-left: 1em;
+    display: block;
+    border-bottom: 1px solid #8d857e;
+}
+
+body > footer {
+    width: 20em;
+    padding: 1em;
+    background: rgb(241, 241, 241);
+}

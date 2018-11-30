@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <title>Reisverhalen U-OV</title>
 </head>
 
@@ -11,19 +11,23 @@
     <header>
         <h1>Reisverhalen</h1>
         <form>
-               <img src="images/zoeken-icon.png" alt="zoeken" title="zoeken"/>
-            <input type="text" placeholder="Vind je verhaal">
+            <img src="images/zoeken-icon.png" alt="zoeken" title="zoeken"/>
+<!--            <input type="text" placeholder="Vind je verhaal">-->
         </form>
         <nav>
-            <a href="account.html"><img src="images/account-icon.png" alt="account"/></a>
+            <a href="account.html">
+            <img src="images/account-icon.png" alt="account"/></a>
         </nav>
     </header>
 
 
         <form>
-           <h2>Wat voor verhaal zoek je?</h2>
+           <section>
+                   <h4>De leukste verhalen voor tijdens je reis</h4>
+                   <h2>Vind hier je verhaal</h2>
                 <button type="button">Filteren</button>
-
+            </section>
+            <p>Gekozen filters:</p>
                     <fieldset>
                         <legend>Genre</legend>
                             <label>Avontuur<input type="checkbox" name="genre" value="avontuur"></label>
@@ -39,16 +43,17 @@
                             <button type="button" name="tekstvorm" value="gedicht">Gedicht</button>
                             <button type="button" name="tekstvorm" value="verhaal">Verhaal</button>
                     </fieldset>
+                    <input type="submit" name="filteren" value="Filteren">
         </form>
 
     <main>
-           <h2>Meeste gelezen verhaal</h2>
+           <h2>Meest gelezen verhaal</h2>
 
         <article>
             <a>
                 <img src="images/verhaal-interview.png" alt="Afbeelding van Interview" title="Stijloefening 78 Interview">
-                <H3>Interview</H3>
                 <footer>
+                    <H3>Interview</H3>
                     <p>Een korte interview met Molovich.</p>
                     <img src="images/sterren.png" alt="waardering"/>
                     <img src="images/bekeken-icon.png" alt="aantal keer bekeken">
@@ -59,8 +64,8 @@
           <h2>Resultaten 16</h2>
 
         <form>
+               <button type="button">Sorteren</button>
                <fieldset>
-                       <legend>Sorteren</legend>
                         <select>
                             <option value="populair">Populair</option>
                                <option value="nieuw">Nieuw</option>
@@ -72,15 +77,14 @@
         <article>
             <a>
                 <img src="images/verhaal-interview.png" alt="Stijloefening 78 Interview" title="Stijloefening 78 Interview">
-                <H3>Interview</H3>
                 <footer>
+                    <H3>Interview</H3>
                     <p>dit is nog weer even een andere test</p>
                     <img src="images/sterren.png" alt="waardering"> <img src="images/bekeken-icon.png" alt="bekeken">
                 </footer>
             </a>
         </article>
 
-        <input type="submit" name="filteren" value="Filteren">
     </main>
 
     <footer>
