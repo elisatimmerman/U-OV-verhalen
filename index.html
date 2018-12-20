@@ -13,7 +13,7 @@
        <img src="../images/U-ov-bruinlogo.png" alt="logo u-ov bruin"/>
         <h1>Reisverhalen</h1>
         <form>
-            <img src="images/Zoek-icon.png" alt="zoeken" title="zoeken"/>
+            <img src="../images/Zoek-icon.png" alt="zoeken" title="zoeken"/>
 <!--            <input type="text" placeholder="Vind je verhaal">-->
         </form>
 
@@ -24,13 +24,14 @@
     </header>
 
     <section>
-        <p>De leukste verhalen voor tijdens je reis</p>
+        <div>
+        <h4>De leukste verhalen voor tijdens je reis</h4>
         <h2>Vind hier je verhaal</h2>
         <button type="button">Filteren</button>
+        </div>
         <p>Gekozen filters:</p>
-    </section>
 
-         <form>
+        <form>
                     <fieldset>
                         <legend>Genre</legend>
                             <label>Avontuur<input type="checkbox" name="genre" value="avontuur"></label>
@@ -48,22 +49,26 @@
                     </fieldset>
                     <input type="submit" name="filteren" value="Filteren">
         </form>
+    </section>
 
     <main>
-           <h2>Meest gelezen verhaal</h2>
-
+           <h2>Populair verhaal</h2>
+        <div>
         <article>
             <a>
                 <img src="images/verhaal-interview.png" alt="Afbeelding van Interview" title="Stijloefening 78 Interview">
                 <footer>
-                    <H3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'De Kids'</H3>
+                    <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'De Kids'</h3>
                     <p>Auteur: Molovich</p>
                     <p>10-05-2011</p>
-                    <img src="images/hart-icon.png" alt="waardering"><p>140</p>
-                    <img src="images/oog-icon.png" alt="aantal keer bekeken"/><p>150</p>
+
+                    <div><img src="images/hart-icon.png" alt="waardering"><p>140</p>
+                    <img src="images/oog-icon.png" alt="aantal keer bekeken"/><p>150</p></div>
+
                 </footer>
             </a>
         </article>
+        </div>
 
           <h2>Resultaten 16</h2>
 
@@ -80,11 +85,13 @@
 
         <article>
             <a>
-                <img src="images/verhaal-interview.png" alt="Stijloefening 78 Interview" title="Stijloefening 78 Interview">
+                <img src="images/alzheimer2.jpg" alt="altzheimer" title="altzheimer">
                 <footer>
                     <h3>Interview</h3>
-                    <p>dit is nog weer even een andere test</p>
-                    <img src="images/sterren.png" alt="waardering"> <img src="images/bekeken-icon.png" alt="bekeken">
+                    <p>Auteur: Molovich</p>
+                    <p>10-05-2011</p>
+                    <div><img src="images/hart-icon.png" alt="waardering"><p>140</p>
+                    <img src="images/oog-icon.png" alt="aantal keer bekeken"/><p>150</p></div>
                 </footer>
             </a>
         </article>
@@ -97,6 +104,7 @@
         <a href="index.html">U-OV website</a>
     </footer>
 
+<script src="script/verhalenwebsite.js"></script>
 </body>
 
 </html>
