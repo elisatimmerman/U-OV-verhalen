@@ -14,7 +14,6 @@
         <h1>Reisverhalen</h1>
         <form>
             <img src="../images/Zoek-icon.png" alt="zoeken" title="zoeken"/>
-<!--            <input type="text" placeholder="Vind je verhaal">-->
         </form>
 
         <nav>
@@ -31,77 +30,115 @@
         </div>
         <p>Gekozen filters:</p>
 
-        <form>
+        <form class="filter">
                     <fieldset>
-                        <legend>Genre</legend>
-                            <label>Avontuur<input type="checkbox" name="genre" value="avontuur"></label>
-                            <label>Detective<input type="checkbox" name="genre" value="detective"></label>
-                            <label>Humor<input type="checkbox" name="genre" value="humor"></label>
-                            <label>Sociaal / politiek<input type="checkbox" name="genre" value="sociaal"></label>
+                                <legend>Genre</legend>
+                        <div>
+                                <label>Avontuur (5)<input type="checkbox" name="genre" value="avontuur"></label>
+                                <label>Detective (5)<input type="checkbox" name="genre" value="detective"></label>
+                                <label>Historisch (7)<input type="checkbox" name="genre" value="historisch"></label>
+                                <label>Humor (17)<input type="checkbox" name="genre" value="humor"></label>
+                                <label>Psychologisch (12)<input type="checkbox" name="genre" value="psychologisch"></label>
+                        </div>
+
+                         <div>
+                                <label>School (10)<input     type="checkbox" name="genre" value="school"></label>
+                                <label>Sociaal / politiek (26)<input  type="checkbox" name="genre"  value="sociaal"></label>
+                                <label>Sport (4)<input type="checkbox"  name="genre" value="sport"></label>
+                                <label>Sprookjes (7)<input type="checkbox" name="genre" value="sprookjes"></label>
+                                <label>Roman (6)<input type="checkbox"  name="genre" value="roman"></label>
+                        </div>
+                    </fieldset>
+
+                   <fieldset>
+                        <legend>Leestijd</legend>
+                        <div>
+                              <input type="range" min="1" max="100" value="50">
+                        </div>
                     </fieldset>
 
                     <fieldset>
                         <legend>Tekstvormen</legend>
-                            <button type="button" name="tekstvorm" value="imitatie">Imitatie</button>
-                            <button type="button" name="tekstvorm" value="dialoog">Dialoog</button>
-                            <button type="button" name="tekstvorm" value="gedicht">Gedicht</button>
-                            <button type="button" name="tekstvorm" value="verhaal">Verhaal</button>
+                            <button type="button" name="tekstvorm" value="imitatie">Imitatie (19)</button>
+                            <button type="button" name="tekstvorm" value="dialoog">Dialoog (9)</button>
+                            <button type="button" name="tekstvorm" value="poezie">Poezie (14)</button>
+                            <button type="button" name="tekstvorm" value="verslag">Verslag (19)</button>
+                            <button type="button" name="tekstvorm" value="beleving">Beleving (40)</button>
                     </fieldset>
+
                     <input type="submit" name="filteren" value="Filteren">
         </form>
     </section>
 
     <main>
-           <h2>Populair verhaal</h2>
-        <div>
-        <article>
-            <a>
-                <img src="images/verhaal-interview.png" alt="Afbeelding van Interview" title="Stijloefening 78 Interview">
-                <footer>
+      <div>
+          <h2>Meest gelezen verhaal</h2>
+
+            <article>
+                <a>
+                    <img src="images/alzheimer2.jpg" alt="altzheimer" title="altzheimer">
+
+                <div>
                     <h3>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij 'De Kids'</h3>
-                    <p>Auteur: Molovich</p>
-                    <p>10-05-2011</p>
+                    <footer>
+                        <ul>
+                           <li>Auteur: Molovich</li>
+                           <li>10-06-2011</li>
+                       </ul>
 
-                    <div><img src="images/hart-icon.png" alt="waardering"><p>140</p>
-                    <img src="images/oog-icon.png" alt="aantal keer bekeken"/><p>150</p></div>
-
-                </footer>
+                        <div><img src="images/hart-icon.png" alt="waardering"><p>140</p>
+                        <img src="images/oog-icon.png" alt="aantal keer bekeken"/><p>150</p></div>
+                    </footer>
+                </div>
             </a>
         </article>
         </div>
 
+        <div>
           <h2>Resultaten 16</h2>
 
         <form>
-               <button type="button">Sorteren</button>
-               <fieldset>
-                        <select>
-                            <option value="populair">Populair</option>
-                               <option value="nieuw">Nieuw</option>
-                            <option value="verhaalnummer">Verhaalnummer</option>
-                        </select>
-                   </fieldset>
-           </form>
+               <select name="Sorteren">
+               <option value="sorteren op" selected>Sorteren</option>
+               <option value="populair">Populair</option>
+               <option value="nieuw">Nieuw</option>
+               <option value="verhaalnummer">Verhaalnummer</option>
+               </select>
+        </form>
+        </div>
 
         <article>
             <a>
-                <img src="images/alzheimer2.jpg" alt="altzheimer" title="altzheimer">
-                <footer>
+                <img src="images/verhaal-interview.png" alt="Afbeelding van Interview" title="Stijloefening 78 Interview">
+
+                <div>
                     <h3>Interview</h3>
-                    <p>Auteur: Molovich</p>
-                    <p>10-05-2011</p>
-                    <div><img src="images/hart-icon.png" alt="waardering"><p>140</p>
-                    <img src="images/oog-icon.png" alt="aantal keer bekeken"/><p>150</p></div>
-                </footer>
+                    <footer>
+                           <ul>
+                               <li>Auteur: Molovich</li>
+                               <li>01-06-2011</li>
+                           </ul>
+
+                        <div><img src="images/hart-icon.png" alt="waardering"><p>140</p>
+                        <img src="images/oog-icon.png" alt="aantal keer bekeken"/><p>150</p></div>
+                    </footer>
+                </div>
             </a>
         </article>
 
     </main>
 
     <footer>
+           <h2>Direct naar</h2>
         <a href="index.html">Overzichtspagina</a>
-        <a href="index.html">Over ons</a>
-        <a href="index.html">U-OV website</a>
+        <a href="https://www.qbuzz.nl/">Over ons</a>
+        <a href="https://www.u-ov.info/">U-OV website</a>
+        <div>
+            <img src="images/U-ov-oranjelogo.png" alt="Logo u-ov">
+            <a href="https://www.u-ov.info/meer-qbuzz/voorwaarden">Voorwaarden</a>
+            <a href="https://www.u-ov.info/meer-qbuzz/disclaimer-privacy">Disclaimer & Privacy</a>
+            <a href="https://www.u-ov.info/meer-qbuzz/cookies">Cookies</a>
+        </div>
     </footer>
 
 <script src="script/verhalenwebsite.js"></script>
