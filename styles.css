@@ -5,46 +5,11 @@
 }
 body{
     font-family: roboto, sans-serif;
-    width: 100%;
+    width: 30em;
     margin: 0;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
 }
-
-@media(max-width: 60em){
-  body{
-          display: grid;
-          grid-template-columns: 1fr, 1fr;
-          grid-column: 3/3;
-        grid-gap: 1em;
-        width: 100%;
-  }
-  }
-
-/*Breakpoint tablet*/
-
-@media (min-width: 30em) {
-  body {
-         display: grid;
-         grid-template-columns: 1fr, 1fr;
-          grid-column: 2/3;
-          grid-gap: 1em;
-          width: 100%;
-          flex-wrap: wrap;
-  }
-
-    body > section {
-        grid-column: 1/1;
-        align-items: center;
-        background: #e7772b;
-        width: 100%;
-        margin-left: 0em;
-        display: flex;
-        flex-wrap: wrap;
-}
-  }
-
 
 
 /*Basic*/
@@ -102,21 +67,21 @@ section {
     width: 100%;
     padding-bottom: 2em;
     padding-top: 4.5em;
-    /display: grid;
 }
-section > div {
+section > div > div {
     background: white;
-    width: 90%;
+    width: 25em;
     padding: 1em;
     padding-top: 1.8em;
     padding-bottom: 1.8em;
+    margin-bottom: 0em;
     border-radius: 0em 1em 1em 0em;
 }
-section > div h2{
+section > div > div > h2{
     margin: 0.5em;
     margin-left: 0em;
 }
-section > div button {   /*filteren bovenaan*/
+section > div > div > button {   /*filteren bovenaan*/
     font-size: 1em;
     width: 15em;
     text-align: left;
@@ -126,11 +91,11 @@ section > div button {   /*filteren bovenaan*/
     border-bottom: 1px solid #8d857e;
     background: none;
 }
-section > p {
+section > div > p {
     background: rgba(255, 255, 255, 0.2);
     font-size: 0.8em;
     color: white;
-    width: 75%;
+    width: 25em;
     padding: 0.5em;
     padding-left: 1em;
     margin-top: 0em;
@@ -143,8 +108,8 @@ section > p {
 /*Filteropties*/
 section > form {
     background: white;
-    height: auto;
-    width: 90%;
+    height: 0;
+    width: 25em;
     padding: 1em;
     padding-top: 1.8em;
     padding-bottom: 1.8em;
@@ -175,7 +140,6 @@ section > form > fieldset > div > label {
 section > form > fieldset > div > label> input {
       float: left;
 }
-
 
 /*Leestijd*/
 /*Bron: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_rangeslider*/
@@ -223,18 +187,39 @@ section > form > fieldset > button {
     box-shadow: 0 0.3em 0.8em 0 rgba(231, 119, 43, 0.3);
 }
 
+form > input {
+    font-size: 1em;
+    color: white;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background: #d6cec6;
+    border-radius: 1em 1em 1em 1em;
+}
+form > input:hover {
+    font-size: 1em;
+    color: white;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background: #e7772b;
+    border-radius: 1em 1em 1em 1em;
+}
+
+
 
 /*Meest gelezen verhaal*/
 
 main > div:first-of-type {
     background-color: #f1f1f1;
+    width: 30em;
     height: 15em;
     padding: 1em;
     margin-bottom: 4em;
     margin-top: -1em; /*Klopt dit wel?*/
 }
 main > div > article:first-of-type {
-    width: 90%;
+    width: 23em;
     height: 12em;
     background: white;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
@@ -382,7 +367,6 @@ footer > div > a {
 /*microinteractie*/
 
 .filter{
-    height: 1em;
     visibility: hidden;
     transition: 0.5s;
 }
@@ -393,3 +377,42 @@ footer > div > a {
 fieldset {
     border-style: none;
 }
+
+
+
+@media(min-width: 60em){
+  body{
+        display: grid;
+        /grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+        grid-template-rows: auto auto;
+        grid-auto-flow: row;
+      }
+    section {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 5em 28em 2em 30em 5em;
+    }
+    section > div > div {
+        border-radius: 1em 1em 1em 1em;
+        height: 8em;
+    }
+    section > div {
+        grid-column: 2;
+    }
+    section > div > div button {   /*filteren bovenaan*/
+        visibility: hidden;
+    }
+    section > div >  p {
+        border-radius: 0em 0em 1em 1em;
+        margin-left: 1em;
+    }
+    .filter{
+        visibility: visible;
+        height: auto;
+        width: 30em;
+        margin-top: 0em;
+        grid-column: 4;
+        grid-row: 1;
+}
+  }
