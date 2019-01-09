@@ -10,55 +10,65 @@
 
 <body>
     <header>
-       <img src="../images/U-ov-bruinlogo.png" alt="logo u-ov bruin"/>
-        <h1>Reisverhalen</h1>
+       <a href="../index.html"><img src="../images/U-ov-bruinlogo.png" alt="logo u-ov bruin"/>
+        <p>Reisverhalen</p></a>
         <form>
             <img src="../images/Zoek-icon.png" alt="zoeken" title="zoeken"/>
-<!--            <input type="text" placeholder="Vind je verhaal">-->
         </form>
 
         <nav>
-            <a href="inloggen/inloggen.html">
+            <a href="inloggen.html">
             <img src="../images/Inlog-icon.png" alt="account"/></a>
         </nav>
     </header>
 
-        <h2>Inloggen</h2>
+    <section>
+       <h1>Inloggen</h1>
 
-     <form>
-         <fieldset>
-              <legend>e-mailadres</legend>
-                 <label><input type="email" name="emailadres"></label>
-         </fieldset>
+       <form>
+            <fieldset>
+                 <legend>e-mailadres</legend>
+                 <label>
+                     <input type="email" name="emailadres">
+                 </label>
+            </fieldset>
 
-         <fieldset>
-              <legend>Wachtwoord</legend>
-                  <label><input type="password" name="wachtwoord"></label>
-         </fieldset>
-                  <input type="submit" name="inloggen" value="Inloggen">
-     </form>
+            <fieldset>
+                 <legend>Wachtwoord</legend>
+                 <label>
+                      <input type="password" name="wachtwoord">
+                  </label>
+            </fieldset>
 
-     <article>
-         <h2>Nog geen account?</h2>
-         <p>Leuke verhalen voor tijdens je reis</p>
-         <p>Nooit meer saaie wachttijden</p>
-        <a href="../index.html">Registreren</a>
-     </article>
+            <input type="submit" name="inloggen" value="Inloggen">
+            <a href="../index.html">Wachtwoord vergeten?</a>
+        </form>
+    </section>
 
-     <article>
-         <h2>Direct naar</h2>
+   <section>
+        <h2>Nog geen account?</h2>
+        <ul>
+              <img src="../images/vink.png" alt="vinkje" title="vinkje"/><li>Leuke verhalen voor tijdens je reis</li>
+              <img src="../images/vink.png" alt="vinkje" title="vinkje"/><li>Geen verveling meer</li>
+        </ul>
+
+        <button href="../index.html">Registreren</button>
+   </section>
+
+    <footer>
+           <h2>Direct naar</h2>
+        <a href="index.html">Overzichtspagina</a>
+        <a href="https://www.qbuzz.nl/">Over ons</a>
         <a href="https://www.u-ov.info/">U-OV website</a>
-        <a href="https://www.u-ov.info/service-contact/contact">Service en contact</a>
-        <a href="https://www.qbuzz.nl/">Over Q-Buzz</a>
-     </article>
+        <div>
+            <img src="../images/U-ov-oranjelogo.png" alt="Logo u-ov">
+            <a href="https://www.u-ov.info/meer-qbuzz/voorwaarden">Voorwaarden</a>
+            <a href="https://www.u-ov.info/meer-qbuzz/disclaimer-privacy">Disclaimer & Privacy</a>
+            <a href="https://www.u-ov.info/meer-qbuzz/cookies">Cookies</a>
+        </div>
+    </footer>
 
-     <footer>
-        <img src="../images/U-ov-oranjelogo.png" alt="logo u-ov oranje"/>
-        <a href="https://www.u-ov.info/meer-qbuzz/voorwaarden">Voorwaarden</a>
-        <a href="https://www.u-ov.info/meer-qbuzz/disclaimer-privacy">Disclaimer en privacy</a>
-        <a href="https://www.u-ov.info/meer-qbuzz/cookies">Cookies</a>
-     </footer>
-
+<script src="script/verhalenwebsite.js"></script>
 </body>
 
 </html>
