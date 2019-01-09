@@ -62,7 +62,7 @@ header > a {
     text-decoration-line: none;
 }
 header > a > img {
-    margin-left: 1em;
+    margin-left: 5%;
     height: 2.5em;
 }
 header > form{
@@ -75,9 +75,8 @@ header > form{
 
 section {
     background: #e7772b;
-    height: 20em;
     width: 100%;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
     padding-top: 4.5em;
 }
 section > div > div {
@@ -114,22 +113,10 @@ section > div > p {
 
 
 /*Filteropties*/
-section:nth-of-type(1) > form {
-    background: white;
-    /height: 0;
-    /width: 90%;
-    padding: 1em;
-    padding-top: 1.8em;
-    padding-bottom: 1.8em;
-    /margin: auto;
-    /margin-top: 1em;
-    border-radius: 1em 1em 1em 1em;
-}
-
 /*Genre*/
 /*Bron: https://www.webdeveloper.com/forum/d/237908-two-column-in-fieldset/6*/
 section > form > fieldset > legend {
-    font-weight: 600;
+    font-weight: 500;
 }
 section > form > fieldset {
     width: 100%;
@@ -195,6 +182,16 @@ section > form > fieldset > button {
     background: white;
     box-shadow: 0 0.3em 0.8em 0 rgba(231, 119, 43, 0.3);
 }
+section > form > fieldset > button:hover {
+    background: #e7772b;
+    color: white;
+    cursor: pointer;
+}
+/*!!!!!Hoe moet je iets noemen als een knop geactiveert moet blijven???!!!!!*/
+section > form > fieldset > button::selection {
+    background: #e7772b;
+    color: white;
+}
 
 form > input {
     width: 10em;
@@ -207,13 +204,8 @@ form > input {
     border-radius: 1em 1em 1em 1em;
 }
 form > input:hover {
-    font-size: 1em;
-    color: white;
-    padding: 1em;
-    padding-left: 2em;
-    padding-right: 2em;
     background: #e7772b;
-    border-radius: 1em 1em 1em 1em;
+    cursor: pointer;
 }
 
 
@@ -223,10 +215,9 @@ form > input:hover {
 section:nth-of-type(2) {
     background-color: #f1f1f1;
     width: 100%;
-    height: 12em;
+    height: 14em;
     padding: 1em;
     margin-bottom: 8em;
-    margin-top: -1em;
 }
 section > a > article {
     width: 90%;
@@ -237,7 +228,8 @@ section > a > article {
     position: relative;
 }
 section > a {
-    width: 80%;
+    width: 100%;
+    margin: auto;
 }
 section > a:nth-of-type(2) {
     visibility: hidden;
@@ -260,7 +252,7 @@ section > a > article > div {
 }
 section > a > article > div > footer > ul li {
     font-size: 0.8em;
-    list-style: none;
+    list-style-type: none;
     margin-left: -3em;
 }
 section > a > article > div > footer > div > img{
@@ -300,12 +292,17 @@ section:nth-of-type(3) > h2 {
 }
 
 /*HIER NOG EVEN NAAR KIJKEN!!!!!!!!!!*/
-section:nth-of-type(3) > form {
+/section:nth-of-type(3) > form {
     padding: 0;
     padding-right: 5em;
     margin-top: 0;
     width: 0;
     background: red;
+}
+section:nth-of-type(3) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 section:nth-of-type(3) > form > select {
     display: flex;
@@ -318,10 +315,13 @@ section:nth-of-type(3) > form > select {
     border-bottom: 1px solid #e7772b;
 }
 
+main > a {
+    text-decoration-line: none;
+}
 main > a > article {
     width: 90%;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin: auto;
+    margin-bottom: 2em;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
     box-shadow: 0 0.8em 0.8em 0 rgba(103, 92, 83, 0.3);
 }
@@ -357,8 +357,6 @@ main > a article > div > footer > div > p {
     margin-right: 2em;
 }
 
-
-
 /*Footer*/
 
 body > footer {
@@ -367,15 +365,15 @@ body > footer {
     margin-top: 2em;
 }
 footer > h2 {
-    margin-left: 1em;
+    margin-left: 5%;
 }
 footer > a {
     color: #54a5dd;
     padding-bottom: 1em;
     margin-bottom: 1em;
-    text-decoration-line: none;
+    text-decoration-line: underline;
     text-align: left;
-    margin-left: 1em;
+    margin-left: 5%;
     display: block;
     border-bottom: 1px solid #8d857e;
     margin-right: 1em;
@@ -389,7 +387,7 @@ body > footer > div {
 }
 footer > div > img {
     margin-bottom: 1em;
-    margin-left: 1em;
+    margin-left: 5%;
 }
 footer > div > a {
     color: #afa9a2;
@@ -397,7 +395,7 @@ footer > div > a {
     margin-bottom: 1em;
     text-decoration-line: none;
     text-align: left;
-    margin-left: 1em;
+    margin-left: 5%;
     display: block;
 }
 
@@ -405,23 +403,93 @@ footer > div > a {
 
 
 /*Inlogpagina*/
-/*main > div {
-    margin-top: 2em;
-    width: 100%;
-    height: 10em;
-    background: #e7772b;
+section > h1 {
+    padding-left: 5%;
+}
+section > form {
+    background: white;
+    border-radius: 1em 1em 1em 1em;
+    width: 95%;
     padding: 1em;
+    margin: auto;
+    margin-bottom: 2em;
+}
+section > form > fieldset > label > input {
+    width: 60%;
+    height: 2em;
+    border: none;
+    border-bottom: 1px solid #8d857e;
+}
+section > form > a {
+    color: #54a5dd;
+    display: block;
+    margin-top: 1em;
 }
 
-main > div > form {
-    width: 25em;
-    background: white;
-    margin: auto;
+section > ul > img {
+    float: left;
+    width: 1em;
+    height: 1em;
+    margin-right: 1em;
+}
+section > ul > img:last-of-type {
+    margin-top: 1em;
+}
+section > ul  {
+    padding: 0;
+}
+section > ul li  {
+    list-style-type: none;
+    margin-top: 1em;
+}
+section > button {
+    min-width: 10em;
+    font-size: 1em;
+    color: white;
     padding: 1em;
-    border-radius: 0.5em 0.5em 0.5em 0.5em;
-    box-shadow: 0 0.8em 0.8em 0 rgba(103, 92, 83, 0.3);
-    position: relative;
-}*/
+    padding-left: 2em;
+    padding-right: 2em;
+    background: #675c53;
+    border-radius: 1em 1em 1em 1em;
+    box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
+}
+section > button:hover {
+    font-size: 1em;
+    color: white;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    background: #675c57;
+    border-radius: 1em 1em 1em 1em;
+    cursor: pointer;
+}
+
+/*Verhalenpagina*/
+section > footer > ul li {
+    float: left;
+    color: white;
+    font-size: 0.8em;
+    list-style-type: none;
+    margin-right: 3em;
+}
+section > footer > div > img{
+    float: left;
+    margin: 0em;
+    margin-left: 5%;
+    margin-right: 0.2em;
+}
+section > footer > div > p {
+    font-size: 0.8em;
+    float: left;
+    margin: auto;
+    margin-top: auto;
+    margin-right: 2em;
+}
+main > img {
+    width: 100%;
+    height: 100%;
+}
+
 
 
 
@@ -429,10 +497,20 @@ main > div > form {
 
 .filter{
     visibility: hidden;
+    /color: white;
+    height: 0;
+    /padding-top: 0em;
+    /padding-bottom: 0em;
     transition: 0.5s;
 }
 .zichtbaar{
+    background: white;
     height: auto;
+    padding: 1em;
+    padding-top: 1.8em;
+    padding-bottom: 1.8em;
+    margin-top: 1em;
+    border-radius: 1em 1em 1em 1em;
     visibility: visible;
 }
 fieldset {
@@ -440,19 +518,21 @@ fieldset {
 }
 
 
-
-
 @media(min-width: 60em){
   body{
-          width: 100%;
+        /width: 100%;
         display: grid;
-        /grid-template-columns: repeat(3, 1fr);
-        /grid-gap: 1em;
-        /grid-template-rows: 1 2;
-        /grid-auto-flow: row;
+        /grid-template-columns: repeat (3, 1fr);
+        grid-template-columns: 5% 30% 30% 30% 5%;
+        grid-template-rows: auto auto auto auto auto;
       }
+    header {
+        /margin: auto;
+    }
     section:nth-of-type(1) {
         display: grid;
+        grid-row-start: 1 / 2;
+        grid-column: 1 / 6;
         height: auto;
     }
     section > div > div {
@@ -461,38 +541,67 @@ fieldset {
         height: 8em;
     }
     section > div {
-        grid-column: 2;
+        /display: grid;
+        grid-column: 2 / 3;
     }
     section > div > div button {   /*filteren bovenaan*/
         visibility: hidden;
     }
     section > div >  p {
         border-radius: 0em 0em 1em 1em;
-        margin-left: 1em;
+        margin-left: 5%;
     }
     .filter{
+        display: grid;
         visibility: visible;
         height: auto;
-        width: 30em;
+        width: 80%;
         margin-top: 0em;
-        grid-column: 4;
-        grid-row: 1;
+        grid-column: 6 / 6;
 }
-    /main > div:first-of-type {
-        grid-template-rows: 2;
-    }
+
+
     section:nth-of-type(2) {
-        display: inline;
+        display: grid;
+        grid-column: 1 / 6;
+        /grid-template-columns: 50% 50%;
+        /grid-template-rows: 3em;
+        /margin: auto;
+        /margin-bottom: ;
 }
-    section > a > article {
-        position: relative;
-        display: inline-flex;
-        width: 40%;
-}
+    section > a {
+        grid-row-start: 2;
+    }
     section > a:nth-of-type(2) {
         visibility: visible;
 }
-    section > a:first-of-type {
-        margin-right: 13%;
-}
+    main {
+        display: grid;
+        grid-column: 1 / 6;
+        grid-template-columns: 33% 33% 33%;
+    }
+    body > footer{
+        display: grid;
+        grid-column: 1 / 6;
+        justify-content: flex-start;
+        align-content: center;
+    }
+    body > footer a{
+        display: inline-flex;
+        width: 100%;
+        margin-right: 2em;
+        grid-row-start: 2;
+    }
+    body > footer > div {
+        display: grid;
+        grid-column: 1 / 6;
+        align-items: center;
+    }
+    body > footer img{
+        grid-row-start: 2;
+    }
+    body > footer > div a {
+        display: flex;
+        padding: 0em;
+    }
   }
