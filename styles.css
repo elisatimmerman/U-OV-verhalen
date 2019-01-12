@@ -82,6 +82,7 @@ section {
 }
 section > div > div {
     background: white;
+    height: auto;
     width: 80%;
     padding: 1em;
     padding-top: 1.8em;
@@ -89,7 +90,7 @@ section > div > div {
     margin-bottom: 0;
     border-radius: 0em 1em 1em 0em;
 }
-section > div > div > button {   /*filteren bovenaan*/
+section > div > div > h1 + button {   /*filteren bovenaan*/
     font-size: 1em;
     width: 50%;
     text-align: left;
@@ -116,6 +117,9 @@ section > div > p {
 /*Filteropties*/
 /*Genre*/
 /*Bron: https://www.webdeveloper.com/forum/d/237908-two-column-in-fieldset/6*/
+fieldset {
+    border-style: none;
+}
 section > form > fieldset > legend {
     font-weight: 500;
 }
@@ -135,7 +139,7 @@ section > form > fieldset > div > label {
       display: block;
       margin: 3px 0;
 }
-section > form > fieldset > div > label> input {
+section > form > fieldset > div > label> input[type^="checkbox"] {
       float: left;
     margin-right: 0.5em;
 }
@@ -177,21 +181,22 @@ section > form > fieldset:nth-of-type(2) > div > input::-moz-range-thumb {
 }
 
 /*Tekstvormen*/
-section > form > fieldset > button {
+input[name^="tekstvorm"] {
     padding: 0.5em;
-    margin-bottom: 0.3em;
+    margin-bottom: 1em;
+    margin-right: 2%;
     font-size: 1em;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
     background: white;
     box-shadow: 0 0.3em 0.8em 0 rgba(231, 119, 43, 0.3);
 }
-section > form > fieldset > button:hover {
-    background: #e7772b;
+input[name^="tekstvorm"]:hover {
     color: white;
-    cursor: pointer;
+    background: #e7772b;
 }
+
 /*!!!!!Hoe moet je iets noemen als een knop geactiveert moet blijven???!!!!!*/
-section > form > fieldset > button::selection {
+/section > form > fieldset:nth-of-type(3) > label::selection {
     background: #e7772b;
     color: white;
 }
@@ -206,6 +211,7 @@ form > input {
     padding-right: 2em;
     background: #d6cec6;
     border-radius: 1em 1em 1em 1em;
+    border: 0;
 }
 form > input:hover {
     background: #e7772b;
@@ -232,6 +238,7 @@ section > a > article {
     position: relative;
 }
 section > a {
+    color: black;
     width: 100%;
     margin: auto;
 }
@@ -275,48 +282,38 @@ section > a > article > div > footer > div > p {
 
 
 /*Resultaten*/
-section:nth-of-type(3) {
+section + section:nth-of-type(3) {
     display: flex;
+    width: 100%;
     padding: 0;
     height: 2em;
     margin: 0;
+    margin-bottom: 2em;
     background: white;
     align-items: center;
-}
-section > form:nth-of-type(3) {
-    background: white;
+    /justify-content: flex-end;
 }
 section:nth-of-type(3) > h2 {
     /display: flex;
     /justify-content: space-between;
     align-items: center;
     /width: 20em;
-    margin: 0;
-    padding-left: 1em;
+    margin-right: 2em;
+    padding-left: 5%;
 }
 
 /*HIER NOG EVEN NAAR KIJKEN!!!!!!!!!!*/
-/section:nth-of-type(3) > form {
-    padding: 0;
-    padding-right: 5em;
-    margin-top: 0;
-    width: 0;
-    background: red;
-}
-/section:nth-of-type(3) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 section:nth-of-type(3) > form > select {
     display: flex;
-    color: white;
+    /justify-content: flex-end;
+    font-size: 1em;
     width: 10em;
-    padding: 0.5em;
-    margin: 0;
     text-align: left;
-    background: black;
-    border-bottom: 1px solid #e7772b;
+    padding: 0.5em;
+    padding-left: 0em;
+    border: 0;
+    border-bottom: 1px solid #8d857e;
+    background: none;
 }
 
 main > a {
@@ -409,9 +406,9 @@ footer > div > a {
 
 /*Inlogpagina*/
 section > h1 {
-    padding-left: 10%;
+    padding-left: 5%;
 }
-section > form {
+section > div + form {
     background: white;
     border-radius: 1em 1em 1em 1em;
     width: 95%;
@@ -422,24 +419,28 @@ section > form {
     margin-bottom: 2em;
     box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
 }
-section > form > fieldset > label > input {
-    width: 60%;
+section > form > fieldset > label > input[type^="email"] {
+    width: 100%;
     height: 2em;
     border: none;
-    border-bottom: 1px solid #8d857e;
+}
+section > form > fieldset > label > input[type^="password"] {
+    width: 100%;
+    height: 2em;
+    border: none;
 }
 section > form > a {
     color: #54a5dd;
     display: block;
     margin-top: 1em;
 }
-div + form > input {
+div + form > input[name=inloggen] {
         width: 10em;
     }
 
 section > h1 + div {
     background-color: #f1f1f1;
-    width: 80%;
+    width: 95%;
     height: 14em;
     padding: 1em;
     margin: auto;
@@ -447,7 +448,7 @@ section > h1 + div {
     margin-top: -2.5em;
     grid-row-start: 3;
     box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
-    border-radius: 1em 1em 1em 1em
+    border-radius: 0em 0em 1em 1em;
 }
 section > div ul > img {
     float: left;
@@ -465,7 +466,7 @@ section > div ul li  {
     list-style-type: none;
     margin-top: 1em;
 }
-section > div ul + button {
+section > div ul + button[href="../index.html"] {
     width: 10em;
     font-size: 1em;
     text-align: center;
@@ -475,7 +476,7 @@ section > div ul + button {
     border-radius: 1em 1em 1em 1em;
     box-shadow: 0 8px 18px 0 rgba(103,92,83,.3);
 }
-section > div ul + button:hover {
+section > div ul + button[href="../index.html"]:hover {
     font-size: 1em;
     color: white;
     padding: 1em;
@@ -486,21 +487,35 @@ section > div ul + button:hover {
 
 
 /*Verhalenpagina*/
+section > footer > ul {
+    width: 100%;
+    float: left;
+    padding: 0;
+    margin-left: 5%;
+}
 section > footer > ul li {
+    display: block;
     float: left;
     color: white;
     font-size: 0.8em;
-    list-style-type: none;
     margin-right: 3em;
 }
-section > footer > div > img{
-    float: left;
-    margin: 0em;
+section > footer > div {
     margin-left: 5%;
+}
+section > footer > div > img {
+    display: flex;
+    float: left;
+    grid-row: 3;
+    margin: 0em;
+    margin-bottom: 1em;
+    /margin-left: 5%;
     margin-right: 0.2em;
 }
 section > footer > div > p {
+    grid-row: 3;
     font-size: 0.8em;
+    color: white;
     float: left;
     margin: auto;
     margin-top: auto;
@@ -510,18 +525,118 @@ main > img {
     width: 100%;
     height: 100%;
 }
+main > img[src="../images/Verhaal/Mobiel/mobiel-titel.jpg"] {
+        visibility: visible;
+    }
+    main > img[src="../images/Verhaal/dekstop/verhaal-desktop-titel.jpg"] {
+        visibility: hidden;
+    }
+    main > img[src="../images/Verhaal/tablet/verhaal-tablet-titel.jpg"] {
+        visibility: hidden;
+    }
+
+section > button [alt^="verhaal-opslaan"] {
+    width: 6em;
+    position: absolute;
+    top: 15em;
+    right: 5%;
+    padding: 1em;
+    /margin: 2em;
+    border: none;
+    border-radius: 10em 10em 10em 10em;
+    background: #8d857e;
+    box-shadow: 0 0.3em 0.8em 0 rgba(0, 0, 0, 0.3);
+}
+
+section + div {
+    position: absolute;
+    margin-left: 5%;
+    top: 70%;
+}
+ section + div > button:nth-of-type(1) {
+    display: block;
+    width: 5em;
+    height: 5em;
+     font-size: 1em;
+    color: white;
+    margin-left: 5%;
+    margin-bottom: 1em;
+    background: rgb(255, 0, 0);
+    border: 0;
+    border-radius: 10em 10em 10em 10em;
+    box-shadow: 0 0.3em 0.8em 0 rgba(0, 0, 0, 0.3);
+}
+button + button:nth-of-type(2) {
+    width: 5em;
+    height: 5em;
+    font-size: 1em;
+    color: white;
+    margin-left: 5%;
+    background: rgb(0, 255, 255);
+    border: 0;
+    border-radius: 10em 10em 10em 10em;
+    box-shadow: 0 0.3em 0.8em 0 rgba(0, 0, 0, 0.3);
+}
+
+main > img + button {
+    position: absolute;
+    top: 80%;
+    right: 1em;
+    width: 9em;
+    height: 9em;
+    background: #8d857e;
+    border-radius: 10em 10em 10em 10em;
+}
+.beoordelingKnopSpin {
+    animation: spin 1.3s linear;
+    background: #A0E2AD;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 
-
+div + main > div {
+    position: absolute;
+    width: 30em;
+    background: #e7772b;
+    padding: 1em;
+    height: auto;
+    top: 60%;
+    /z-index: -1;
+}
+main > button + div > form {
+    background: white;
+    width: 22em;
+    height: 17em;
+    padding: 1em;
+    border-radius: 1em 1em 1em 1em;
+}
+main > div > form > img[src^="../images/ster-icon.png"] {
+    width: 2em;
+    margin-bottom: 1em;
+}
+main > div > form > img + fieldset > legend {
+    font-size: 1em;
+    font-weight: 600;
+}
+main > div > form > img + fieldset {
+    border-bottom: 0;
+}
+main > div > form > img + fieldset > label {
+    float: left;
+    margin-right: 2em;
+}
+main > div > form > img + fieldset > label > input[type^="radio"] {
+    float: left;
+}
 
 /*microinteractie*/
 
 .filter{
     visibility: hidden;
-    /color: white;
     height: 0;
-    /padding-top: 0em;
-    /padding-bottom: 0em;
     transition: 0.5s;
 }
 .zichtbaar{
@@ -534,9 +649,20 @@ main > img {
     border-radius: 1em 1em 1em 1em;
     visibility: visible;
 }
-fieldset {
-    border-style: none;
+
+.beoordeling{
+    visibility: hidden;
+    height: 0;
+    transition: 0.5s;
 }
+.beoordelingZichtbaar{
+    height: auto;
+    visibility: visible;
+    z-index: 2;
+}
+
+
+
 
 
 @media(min-width: 30em) {
@@ -550,19 +676,20 @@ fieldset {
         height: auto;
     }
     section > div {
-        /display: grid;
-        /grid-column-start: 1;
-        /grid-column-end: 4;
-        grid-column: 2 / 5;
-        /grid-column: 1 / 4;
+        grid-column: 1 / 5;
+        height: auto;
+        width: 90%;
+        margin-left: 5%;
     }
     section > div > div {
         width: 100%;
+        height: auto;
         border-radius: 1em 1em 1em 1em;
-        height: 8em;
+        /height: 8em;
     }
     section > div > div button {   /*filteren bovenaan*/
         visibility: hidden;
+        height: 0;
     }
     section > div >  p {
         border-radius: 0em 0em 1em 1em;
@@ -571,7 +698,7 @@ fieldset {
     .filter{
         visibility: visible;
         height: auto;
-        margin-top: 0em;
+        grid-row: 1;
         grid-column: 5 / 10;
 }
     section:nth-of-type(2) {
@@ -616,9 +743,6 @@ fieldset {
         grid-row: 2 / 3;
         margin-top: 0;
     }
-    div + form > input {
-        width: 10em;
-    }
     section h1 + div {
         grid-column: 5 / 11;
         grid-row: 2 / 3;
@@ -629,7 +753,24 @@ fieldset {
         margin-top: 5%;
         margin-bottom: 0;
     }
-  }
+    /*Verhalenpagina*/
+header + section > h1 + footer {
+           grid-column: 1/5;
+        grid-row: 2 / 3;
+    }
+    section > footer > ul li {
+        grid-column-end: 4;
+}
+    main > img[src="../images/Verhaal/Mobiel/mobiel-titel.jpg"] {
+        visibility: hidden;
+    }
+    main > img[src="../images/Verhaal/dekstop/verhaal-desktop-titel.jpg"] {
+        visibility: hidden;
+    }
+    main > img[src="../images/Verhaal/tablet/verhaal-tablet-titel.jpg"] {
+        visibility: visible;
+    }
+}
 
 
 @media(min-width: 60em) {
@@ -716,7 +857,7 @@ fieldset {
         margin-top: 0;
     }
     div + form > input {
-        width: 10em;
+        max-width: 20em;
     }
     section h1 + div {
         grid-column: 6 / 10;
@@ -724,8 +865,19 @@ fieldset {
         height: 70%;
         padding-left: 3em;
         margin-left: -1em;
-        border-radius: 1em 1em 1em 1em;
+        border-radius: 0em 1em 1em 0em;
         margin-top: 5%;
         margin-bottom: 0;
+    }
+
+    /*Verhalenpagina*/
+     main > img[src="../images/Verhaal/Mobiel/mobiel-titel.jpg"] {
+        visibility: hidden;
+    }
+    main > img[src="../images/Verhaal/dekstop/verhaal-desktop-titel.jpg"] {
+        visibility: visible;
+    }
+    main > img[src="../images/Verhaal/tablet/verhaal-tablet-titel.jpg"] {
+        visibility: hidden;
     }
   }
