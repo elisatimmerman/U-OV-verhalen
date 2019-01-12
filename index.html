@@ -46,7 +46,7 @@
 
                          <div>
                                 <label>School (10)<input     type="checkbox" name="genre" value="school"></label>
-                                <label>Sociaal / politiek (26)<input  type="checkbox" name="genre"  value="sociaal"></label>
+                                <label>Sociaal(26)<input  type="checkbox" name="genre"  value="sociaal"></label>
                                 <label>Sport (4)<input type="checkbox"  name="genre" value="sport"></label>
                                 <label>Sprookjes (7)<input type="checkbox" name="genre" value="sprookjes"></label>
                                 <label>Roman (6)<input type="checkbox"  name="genre" value="roman"></label>
@@ -61,22 +61,18 @@
                     </fieldset>
 
                     <fieldset>
-                        <legend>Tekstvormen</legend>
-                            <button type="button" name="tekstvorm" value="imitatie">Imitatie (19)</button>
-                            <button type="button" name="tekstvorm" value="dialoog">Dialoog (9)</button>
-                            <button type="button" name="tekstvorm" value="poezie">Poezie (14)</button>
-                            <button type="button" name="tekstvorm" value="verslag">Verslag (19)</button>
-                            <button type="button" name="tekstvorm" value="beleving">Beleving (40)</button>
+                            <legend>Tekstvormen</legend>
+                            <input type="button" name="tekstvorm" value="Imitatie (19)"><input type="button" name="tekstvorm" value="Dialoog (9)"><input type="button" name="tekstvorm" value="Poezie(14)"><input type="button" name="tekstvorm" value="Verslag (19)"><input type="button" name="tekstvorm" value="Beleving (40)">
                     </fieldset>
 
-                    <input type="submit" name="filteren" value="Filteren">
+                    <input type="submit" name="filteren" value="Filter 99 verhalen">
         </form>
     </section>
 
     <section>
-            <h2>Het meest gelezen verhaal</h2>
+            <h2>Populair verhaal</h2>
 
-           <a>
+           <a href="verhaal/interview.html">
                 <article>
                     <img src="images/alzheimer2.jpg" alt="altzheimer" title="altzheimer">
 
@@ -95,7 +91,7 @@
                 </article>
             </a>
 
-            <a>
+            <a href="verhaal/interview.html">
                 <article>
                     <img src="images/alzheimer2.jpg" alt="altzheimer" title="altzheimer">
 
@@ -120,10 +116,9 @@
 
         <form>
                <select name="Sorteren">
-               <option value="sorteren op" selected>Sorteren</option>
-               <option value="populair">Populair</option>
-               <option value="nieuw">Nieuw</option>
-               <option value="verhaalnummer">Verschijningsdatum</option>
+                       <option value="populair" selected>Populair</option>
+                       <option value="nieuw">Nieuw</option>
+                       <option value="verhaalnummer">Best beoordeeld</option>
                </select>
         </form>
    </section>
