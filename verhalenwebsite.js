@@ -26,8 +26,6 @@ function showBeoordeling() {
     beoordeling.classList.toggle('beoordelingZichtbaar');
 }
 
-
-
 function show() {
     filterForm.classList.toggle('zichtbaar');
 }
