@@ -3,6 +3,9 @@
 * {
     box-sizing: border-box;
 }
+*:focus {
+    outline: none;
+}
 
 body {
     font-family: roboto, sans-serif;
@@ -17,11 +20,13 @@ h1 {
     color: black;
     font-size: 1.4em;
     font-weight: 600;
+    margin-left: 3vw;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 h2 {
     font-size: 1.2em;
+    /margin-left: 5vw;
 }
 h3 {
     font-size: 1em;
@@ -91,9 +96,13 @@ section > div > div {
     margin-bottom: 0;
     border-radius: 0 1em 1em 0;
 }
+section > div > div > h1 {
+    margin-left: 0;
+}
 section > div > div > h1 + button {
-    /*filteren bovenaan*/
     font-size: 1em;
+    font-weight: 100;
+    color: #8d857e;
     width: 50%;
     text-align: left;
     padding: 0.5em;
@@ -119,6 +128,9 @@ section > div > p {
 /*Filteropties*/
 /*Genre*/
 /*Bron: https://www.webdeveloper.com/forum/d/237908-two-column-in-fieldset/6*/
+form[class="filter"] {
+    padding: 1em;
+}
 fieldset {
     border-style: none;
 }
@@ -132,14 +144,20 @@ section > form > fieldset {
 }
 section > form > fieldset > div {
     font-size: 1em;
+    width: 100%;
+    /min-width: 20em;
     float: left;
-    width: 12em;
+    justify-content: space-between;
     padding-right: 0.5em;
 }
 section > form > fieldset > div > label {
     clear: both;
     display: block;
     margin: 3px 0;
+}
+section > form > fieldset > div > label > div {
+    float: right;
+    margin-right: 5%;
 }
 section > form > fieldset > div > label > input[type^="checkbox"] {
     float: left;
@@ -183,6 +201,9 @@ section > form > fieldset:nth-of-type(2) > div > input::-moz-range-thumb {
 }
 
 /*Tekstvormen*/
+section > form > fieldset:nth-of-type(3) {
+    border: none;
+}
 input[name^="tekstvorm"] {
     padding: 0.5em;
     border: 0;
@@ -217,14 +238,14 @@ form > input:hover {
 
 
 
-/*Popualir verhaal*/
+/*Populair verhaal*/
 
 section:nth-of-type(2) {
     background-color: #f1f1f1;
     width: 100%;
-    height: 14em;
+    height: 24em;
     padding: 1em;
-    margin-bottom: 8em;
+    margin-bottom: 9em;
 }
 section > a > article {
     width: 90%;
@@ -238,9 +259,7 @@ section > a {
     color: black;
     width: 100%;
     margin: auto;
-}
-section > a:nth-of-type(2) {
-    visibility: hidden;
+    margin-bottom: 1em;
 }
 a h3:hover {
     color: #e7772b;
@@ -255,11 +274,14 @@ section > a > article > div {
     background: white;
     position: absolute;
     top: 1em;
-    right: -1%;
+    right: -2%;
     margin-right: -2em;
     padding: 1em;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
     box-shadow: 0 0.8em 0.8em 0 rgba(103, 92, 83, 0.3);
+}
+section > a > article > div > h3 {
+    height: 3.5em
 }
 section > a > article > div > footer > ul li {
     font-size: 0.8em;
@@ -295,14 +317,23 @@ section + section:nth-of-type(3) {
 section:nth-of-type(3) > h2 {
     margin-left: 2vw;
 }
-section:nth-of-type(3) > form > select[name^="sorteren"] {
+section:nth-of-type(3) > form > label {
+    font-weight: 500;
+    margin-left: 0.5em;
+}
+section:nth-of-type(3) > form > label select[name^="sorteren"] {
+    display: block;
     font-size: 1em;
+    font-weight: 100;
+    color: #8d857e;
     width: 10em;
     text-align: left;
     padding: 0.5em;
     padding-left: 0;
-    margin-right: 2vw;
+    margin-right: 5vw;
+    margin-top: 0.5em;
     border: 0;
+    border-radius: none;
     border-bottom: 1px solid #8d857e;
     background: none;
 }
@@ -320,12 +351,15 @@ main > a > article {
 }
 main > a article > img {
     width: 100%;
-    height: 10em;
     border-radius: 0.5em 0.5em 0 0;
 }
 main > a article > div {
-    margin-top: 1em;
+    height: 10em;
+    padding: 1em;
     padding-left: 1em;
+}
+main > a article > div > h3 {
+    height: 4em;
 }
 main > a article > div > footer {
     display: flex;
@@ -355,7 +389,6 @@ main > a article > div > footer > div > p {
 body > footer {
     background: rgb(241, 241, 241);
     padding-top: 2em;
-    margin-top: 2em;
 }
 footer > h2 {
     margin-left: 5%;
@@ -396,9 +429,6 @@ footer > div > a {
 
 
 /*Inlogpagina*/
-section > h1 {
-    padding-left: 5%;
-}
 section > div + form {
     background: white;
     border-radius: 1em 1em 1em 1em;
@@ -410,15 +440,30 @@ section > div + form {
     margin-bottom: 2em;
     box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
 }
-section > form > fieldset > label > input[type^="email"] {
-    width: 100%;
-    height: 2em;
-    border: none;
+section > form > label {
+    margin-bottom: 1em;
 }
-section > form > fieldset > label > input[type^="password"] {
+section > form > label > input[type^="email"] {
     width: 100%;
     height: 2em;
     border: none;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    border-bottom: 1px solid #8d857e;
+}
+section > form > label > input[type^="email"]:focus {
+    border-bottom: 1px solid #fcd900;
+}
+section > form > label > input[type^="password"] {
+    width: 100%;
+    height: 2em;
+    border: none;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #8d857e;
+}
+section > form > label > input[type^="password"]:focus {
+    border-bottom: 1px solid #fcd900;
 }
 section > form > a {
     color: #54a5dd;
@@ -434,9 +479,10 @@ section > h1 + div {
     width: 95%;
     height: 14em;
     padding: 1em;
+    padding-top: 1.5em;
     margin: auto;
     margin-bottom: 1em;
-    margin-top: -2.5em;
+    margin-top: -3em;
     grid-row-start: 3;
     box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
     border-radius: 0 0 1em 1em;
@@ -455,17 +501,19 @@ section > div ul li {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-section > div ul + button{
+section > div ul + a[href="../index.html"] {
+    position: absolute;
     width: 10em;
     font-size: 1em;
     text-align: center;
+    text-decoration: none;
     color: white;
     padding: 1em;
     background: #675c53;
     border-radius: 1em 1em 1em 1em;
     box-shadow: 0 8px 18px 0 rgba(103, 92, 83, .3);
 }
-section > div ul + button:hover {
+section > div ul + a[href="../index.html"]:hover {
     font-size: 1em;
     color: white;
     padding: 1em;
@@ -512,8 +560,8 @@ section > footer > div > p {
 
 main > img[src^="../images/Verhaal/Mobiel"] {
     visibility: visible;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 main > img[src^="../images/Verhaal/dekstop"] {
     visibility: hidden;
@@ -525,9 +573,9 @@ main > img[src^="../images/Verhaal/tablet"] {
 }
 
 section > footer + button {
-    width: 8%;
+    width: 5em;
     position: absolute;
-    top: 29%;
+    top: 27%;
     right: 5%;
     padding: 1%;
     border: 0;
@@ -663,14 +711,11 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
 
 
 
-@media(min-width: 30em) {
+@media(min-width: 40em) {
     body {
         display: grid;
     }
 
-    h1 {
-        margin-left: 5%;
-    }
     section:nth-of-type(1) {
         display: grid;
         grid-column: 1 / 6;
@@ -703,19 +748,62 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
 
     .filter {
         visibility: visible;
+        margin-top: 0;
         height: auto;
         grid-row: 1;
         grid-column: 5 / 10;
     }
 
-    section:nth-of-type(2) {
-        display: grid;
-        grid-column: 1 / 6;
+    section > form > fieldset > div {
+    width: 50%;
+    float: left;
+}
+
+    section {
+        grid-column-gap: 1em;
+}
+
+    section > a > article > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
     }
+
+    section > a > article > div {
+    width: 80%;
+    right: -1%;
+    }
+
+    section:nth-of-type(2) {
+        height: 14em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column: 1 / 6;
+        margin-bottom: 6em;
+    }
+
+    section > a {
+        grid-row-start: 2;
+    }
+
+    section > a > article > div > h3 {
+    height: 4em
+}
 
     section + section:nth-of-type(3) {
         grid-column: 1 /6;
     }
+
+    section:nth-of-type(3) > form > label {
+    display: flex;
+    align-content: center;
+    margin-right: 3vw;
+    }
+
+    section:nth-of-type(3) > form > label select[name^="sorteren"] {
+    margin: 0;
+    margin-left: 1em;
+}
 
     main {
         display: grid;
@@ -757,6 +845,7 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
         display: grid;
         grid-column: 1 / 5;
         grid-row: 2 / 3;
+        padding: 1.5em;
         margin-top: 0;
         margin-left: 5%;
     }
@@ -766,8 +855,8 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
         grid-row: 2 / 3;
         height: 80%;
         padding-left: 2em;
-        margin-left: -1em;
-        border-radius: 1em 1em 1em 1em;
+        margin-left: -1.5em;
+        border-radius: 0em 1em 1em 0em;
         margin-top: 5%;
         margin-bottom: 0;
     }
@@ -845,6 +934,9 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
         grid-row: 1 / 3;
     }
 
+    section {
+        grid-column-gap: 1em;
+    }
 
     section:nth-of-type(2) {
         display: grid;
@@ -852,12 +944,13 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
         grid-column: 1 / 6;
     }
 
-    section > a {
-        grid-row-start: 2;
+    section > a > article > div > h3 {
+    height: 3em;
     }
 
-    section > a:nth-of-type(2) {
-        visibility: visible;
+
+    section > a {
+        grid-row-start: 2;
     }
 
     main {
