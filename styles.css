@@ -45,13 +45,13 @@ p {
 
 
 /*Navigatie*/
-
 header {
+    display: flex;
     width: 100%;
     text-align: center;
     background: #675c53;
     height: 2.5em;
-    padding-right: 5%;
+    padding-right: 5vw;
     position: fixed;
     z-index: 5;
     display: flex;
@@ -72,7 +72,28 @@ header > a > img {
     height: 2.5em;
 }
 header > form {
-    padding-right: 1em;
+    display: flex;
+    height: 1em;
+}
+header > form > input[placeholder=Zoeken] {
+    visibility: hidden;
+    width: 0;
+}
+header > form > img {
+    margin-left: 0.5em;
+    width: 1em;
+    height: 1em;
+    margin-right: -3em;
+}
+header > nav a {
+    text-decoration: none;
+}
+header > nav > a span {
+    visibility: hidden;
+    width: 0;
+}
+header > nav > a > img {
+    margin-left: 0.5em;
 }
 
 
@@ -133,6 +154,8 @@ form[class="filter"] {
 }
 fieldset {
     border-style: none;
+    padding: 0;
+    padding-bottom: 1em;
 }
 section > form > fieldset > legend {
     font-weight: 500;
@@ -142,7 +165,7 @@ section > form > fieldset {
     margin-bottom: 1em;
     border-bottom: 1px solid #8d857e;
 }
-section > form > fieldset > div {
+section > form > fieldset > div > div {
     font-size: 1em;
     width: 100%;
     /min-width: 20em;
@@ -150,27 +173,56 @@ section > form > fieldset > div {
     justify-content: space-between;
     padding-right: 0.5em;
 }
-section > form > fieldset > div > label {
+section > form > fieldset > div > div > label {
     clear: both;
     display: block;
     margin: 3px 0;
 }
-section > form > fieldset > div > label > div {
+section > form > fieldset > div > div > p {
     float: right;
+    margin: 0;
+    margin-top: -1.5em;
     margin-right: 5%;
 }
-section > form > fieldset > div > label > input[type^="checkbox"] {
+section > form > fieldset > div > div > label > input[type^="checkbox"] {
     float: left;
     margin-right: 0.5em;
 }
 
+section > form > fieldset > button {
+    font-size: 1em;
+    margin-top: 0.2em;
+    background: none;
+    border: none;
+    color: #54a5dd;
+    text-decoration: underline;
+}
 /*Leestijd*/
 /*Bron: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_rangeslider*/
-
-section > form > fieldset:nth-of-type(2) > div {
+section > form > fieldset:nth-of-type(2) > div:nth-of-type(1) {
     width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
 }
-section > form > fieldset:nth-of-type(2) > div > input {
+section > form > fieldset:nth-of-type(2) > div:first-of-type > p {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: #8d857e;
+    margin: 0;
+}
+
+section > form > fieldset:nth-of-type(2) > div:nth-of-type(2) > p {
+    font-size: 0.8em;
+    margin-bottom: 0.2em;
+}
+
+section > form > fieldset:nth-of-type(2) > div + div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+section > form > fieldset:nth-of-type(2) >  input {
     -webkit-appearance: none;
     width: 100%;
     height: 1em;
@@ -180,11 +232,12 @@ section > form > fieldset:nth-of-type(2) > div > input {
     -webkit-transition: .2s;
     transition: opacity .2s;
     border-radius: 1em 1em 1em 1em;
+    grid-row: 2;
 }
-section > form > fieldset:nth-of-type(2) > div > input:hover {
+section > form > fieldset:nth-of-type(2) > input:hover {
     opacity: 1;
 }
-section > form > fieldset:nth-of-type(2) > div > input::-webkit-slider-thumb {
+section > form > fieldset:nth-of-type(2) > input::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 2em;
@@ -193,7 +246,7 @@ section > form > fieldset:nth-of-type(2) > div > input::-webkit-slider-thumb {
     cursor: pointer;
     border-radius: 1em 1em 1em 1em;
 }
-section > form > fieldset:nth-of-type(2) > div > input::-moz-range-thumb {
+section > form > fieldset:nth-of-type(2) > input::-moz-range-thumb {
     width: 25px;
     height: 25px;
     background: #e7772b;
@@ -205,6 +258,7 @@ section > form > fieldset:nth-of-type(3) {
     border: none;
 }
 input[name^="tekstvorm"] {
+    float: left;
     padding: 0.5em;
     border: 0;
     margin-bottom: 1em;
@@ -271,6 +325,7 @@ section > a > article > img {
 }
 section > a > article > div {
     width: 80%;
+    height: 10.5em;
     background: white;
     position: absolute;
     top: 1em;
@@ -281,14 +336,18 @@ section > a > article > div {
     box-shadow: 0 0.8em 0.8em 0 rgba(103, 92, 83, 0.3);
 }
 section > a > article > div > h3 {
-    height: 3.5em
+    height: 43%;
+    margin-bottom: 1em;
+
 }
 section > a > article > div > footer > ul li {
     font-size: 0.8em;
     list-style-type: none;
     margin-left: -3em;
+    /margin-top: 2em;
 }
 section > a > article > div > footer > div > img {
+    /width: 3vw;
     float: left;
     margin: 0;
     margin-right: 0.2em;
@@ -298,7 +357,7 @@ section > a > article > div > footer > div > p {
     float: left;
     margin: auto;
     margin-top: auto;
-    margin-right: 2em;
+    margin-right: 9%;
 }
 
 
@@ -354,12 +413,14 @@ main > a article > img {
     border-radius: 0.5em 0.5em 0 0;
 }
 main > a article > div {
+    /grid-template-rows: repeat(3, 1fr);
     height: 10em;
     padding: 1em;
     padding-left: 1em;
 }
 main > a article > div > h3 {
-    height: 4em;
+    height: 50%;
+    grid-row-start: 2;
 }
 main > a article > div > footer {
     display: flex;
@@ -371,17 +432,28 @@ main > a article > div > footer > ul li {
     list-style: none;
     margin-left: -3em;
 }
+main > a article > div > footer > div {
+    /width: -10%;
+    display: flex;
+    align-content: center;
+    margin-right: 5%;
+}
 main > a article > div > footer > div > img {
     float: left;
+    grid-row-start: 1;
     margin: 0;
-    margin-right: 0.2em;
+    margin-right: 5%;
 }
 main > a article > div > footer > div > p {
-    font-size: 0.8em;
+    grid-row-start: ;
+    font-size: 0.7em;
     float: left;
     margin: auto;
     margin-top: auto;
-    margin-right: 2em;
+    margin-right: 1em;
+}
+main > a article > div > footer > div > p:last-of-type {
+    margin-right: 0em;
 }
 
 /*Footer*/
@@ -403,6 +475,9 @@ footer > a {
     display: block;
     border-bottom: 1px solid #8d857e;
     margin-right: 5%;
+}
+footer > a:hover {
+    text-decoration: none;
 }
 body > footer > div {
     background: white;
@@ -603,7 +678,6 @@ section + div > button:nth-of-type(1) {
     border-radius: 10em 10em 10em 10em;
     box-shadow: 0 0.3em 0.8em 0 rgba(0, 0, 0, 0.3);
 }
-
 button + button:nth-of-type(2) {
     width: 4em;
     height: 4em;
@@ -614,6 +688,7 @@ button + button:nth-of-type(2) {
     border-radius: 10em 10em 10em 10em;
     box-shadow: 0 0.3em 0.8em 0 rgba(0, 0, 0, 0.3);
 }
+
 main > img + button {
     position: absolute;
     padding: 1em;
@@ -659,16 +734,23 @@ main > button + div > form {
     padding: 1em;
     border-radius: 1em 1em 1em 1em;
 }
-main > div > form > img[src^="../images/ster-icon.png"] {
+main > div > form > img[src^="../images/ster-icon-wit.png"] {
     width: 2em;
     margin-bottom: 1em;
+    background: #8d857e;
+    border-radius: 1em 1em 1em 1em;
+}
+main > div > form > img[src^="../images/ster-icon-wit.png"]:hover {
+    background: #fcd900;
 }
 main > div > form > img + fieldset > legend {
     font-size: 1em;
     font-weight: 600;
 }
 main > div > form > img + fieldset {
+    padding-left: 0;
     border-bottom: 0;
+    margin-bottom: 1.5em;
 }
 main > div > form > img + fieldset > label {
     float: left;
@@ -683,7 +765,6 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
 .filter {
     visibility: hidden;
     height: 0;
-    transition: 0.5s;
 }
 .zichtbaar {
     background: white;
@@ -694,6 +775,18 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
     margin-top: 1em;
     border-radius: 1em 1em 1em 1em;
     visibility: visible;
+    transition: 0.5s;
+}
+
+.tweedeGenre {
+    visibility: hidden;
+    height: 0;
+}
+.zichtbaarOpties {
+    background: white;
+    height: 10em;
+    visibility: visible;
+    transition: 0.5s;
 }
 
 .beoordeling {
@@ -711,11 +804,60 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
 
 
 
-@media(min-width: 40em) {
+@media(min-width: 30em) {
     body {
         display: grid;
     }
 
+    header > form {
+    display: flex;
+    }
+    header > form > input[placeholder=Zoeken] {
+    visibility: visible;
+    width: auto;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0em 0em 0em 0em;
+    box-shadow: 0;
+    }
+    header > form > input::placeholder {
+    color: white;
+    font-weight: 330;
+    }
+    header > form > input[type=text] {
+    text-align: right;
+    width: 8em;
+    color: white;
+    font-size: 1em;
+    font-weight: 330;
+    }
+    header > form > input[type=text]:focus {
+    border-bottom: 1px solid #fcd900;
+    }
+    header > form > img {
+    margin-left: 0.5em;
+    margin-right: 0;
+    width: 1em;
+    height: 1em;
+    }
+    header > nav a {
+    text-decoration: none;
+    }
+    header > nav  {
+    display: flex;
+    margin-left: 1em;
+    }
+    header > nav > a span {
+    visibility: visible;
+    width: auto;
+    color: white;
+    font-size: 1em;
+    font-weight: 330;
+    }
+    header > nav > a > img {
+    margin-left: 0.5em;
+    }
     section:nth-of-type(1) {
         display: grid;
         grid-column: 1 / 6;
@@ -732,7 +874,7 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
 
     section > div > div {
         width: 100%;
-        height: auto;
+        height: 25%;
         border-radius: 1em 1em 1em 1em;
     }
 
@@ -748,6 +890,7 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
 
     .filter {
         visibility: visible;
+        width: 110%;
         margin-top: 0;
         height: auto;
         grid-row: 1;
@@ -755,11 +898,12 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
     }
 
     section > form > fieldset > div {
-    width: 50%;
+    /width: 50%;
     float: left;
 }
 
-    section {
+    section:nth-of-type(3) {
+        margin-top: 2em;
         grid-column-gap: 1em;
 }
 
@@ -770,8 +914,9 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
     }
 
     section > a > article > div {
-    width: 80%;
-    right: -1%;
+        height: 14em;
+        right: -1%;
+        margin-right: -5%;
     }
 
     section:nth-of-type(2) {
@@ -787,7 +932,7 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
     }
 
     section > a > article > div > h3 {
-    height: 4em
+        height: 60%;
 }
 
     section + section:nth-of-type(3) {
@@ -811,22 +956,31 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    main > a article > div > footer {
+    width: 100%;
+    }
+    main > a article > div > footer > div > p {
+    margin-right: 5%;
+    }
+
     body > footer {
         display: grid;
         grid-column: 1 / 6;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         align-content: center;
     }
 
     body > footer a {
         display: flex;
         justify-content: flex-start;
+        margin-left: 5%;
         grid-row-start: 2;
     }
 
     body > footer > div {
         display: grid;
         grid-column: 1 / 6;
+        grid-template-columns: repeat(6, 1fr);
         align-items: center;
     }
 
@@ -835,8 +989,9 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
     }
 
     body > footer > div a {
+        width: 5em;
         justify-content: flex-start;
-        padding: 0em;
+        padding: 0;
     }
 
 
@@ -855,7 +1010,7 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
         grid-row: 2 / 3;
         height: 80%;
         padding-left: 2em;
-        margin-left: -1.5em;
+        margin-left: -1em;
         border-radius: 0em 1em 1em 0em;
         margin-top: 5%;
         margin-bottom: 0;
@@ -887,16 +1042,14 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
         height: 100vh;
     }
 
-    div + main > div {
-        right: 0;
-        width: 30em;
-    }
-}
-
 
 @media(min-width: 60em) {
     body {
         display: grid;
+    }
+
+    header > form > input[type=text] {
+    width: 15em;
     }
 
     section:nth-of-type(1) {
@@ -908,7 +1061,7 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
     }
 
     section > div {
-        grid-column: 2 / 5;
+    grid-column: 1 / 5;
     }
 
     section > div > div {
@@ -928,10 +1081,27 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
 
     .filter {
         visibility: visible;
+        width: 110%;
         height: auto;
         margin-top: 0;
         grid-column: 5 / 10;
         grid-row: 1 / 3;
+        /margin-right: 5vw;
+    }
+
+    section > form > fieldset > button {
+        visibility: hidden;
+        height: 0;
+    }
+
+    .tweedeGenre {
+        visibility: visible;
+        margin-top: -1.5em;
+        transition: 0s;
+}
+
+    section > form > fieldset > div  {
+    width: 50%;
     }
 
     section {
@@ -944,8 +1114,12 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
         grid-column: 1 / 6;
     }
 
+    section > a > article > div {
+        height: 10em;
+    }
+
     section > a > article > div > h3 {
-    height: 3em;
+        height: 3em;
     }
 
 
@@ -957,35 +1131,6 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
         display: grid;
         grid-column: 1 / 6;
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    body > footer {
-        display: grid;
-        grid-column: 1 / 6;
-        grid-template-columns: repeat(4, 1fr);
-        align-content: center;
-    }
-
-    body > footer a {
-        display: flex;
-        justify-content: flex-start;
-        margin-right: 2em;
-        grid-row-start: 2;
-    }
-
-    body > footer > div {
-        display: grid;
-        grid-column: 1 / 6;
-        align-items: center;
-    }
-
-    body > footer img {
-        grid-row-start: 2;
-    }
-
-    body > footer > div a {
-        justify-content: flex-start;
-        padding: 0;
     }
 
 
