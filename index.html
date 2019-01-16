@@ -14,11 +14,13 @@
             <p>Reisverhalen</p>
         </a>
         <form>
-            <img src="images/Zoek-icon.png" alt="zoeken" title="zoeken" />
+           <input type="text" alt="zoeken" placeholder="Zoeken">
+            <img src="images/Zoek-icon.png" alt="zoeken" title="zoeken">
         </form>
 
         <nav>
-            <a href="inloggen/inloggen.html">
+            <a href="inloggen/inloggen.html" placeholder="inloggen">
+               <span>Inloggen</span>
                 <img src="images/Inlog-icon.png" alt="account"></a>
         </nav>
     </header>
@@ -38,27 +40,52 @@
             <fieldset>
                 <legend>Genre</legend>
                 <div>
-                    <label>Avontuur <div>(5)</div><input type="checkbox" name="genre" value="5"></label>
-                    <label>Detective <div>(5)</div><input type="checkbox" name="genre" value="5"></label>
-                    <label>Historisch <div>(7)</div><input type="checkbox" name="genre" value="7"></label>
-                    <label>Humor <div>(17)</div><input type="checkbox" name="genre" value="17"></label>
-                    <label>Psychologisch <div>(12)</div><input type="checkbox" name="genre" value="12"></label>
+                    <div><label>Avontuur <input type="checkbox" name="genre" value="5"></label>
+                        <p>(5)</p>
+                    </div>
+                    <div><label>Detective<input type="checkbox" name="genre" value="5"></label>
+                        <p>(5)</p>
+                    </div>
+                    <div><label>Historisch<input type="checkbox" name="genre" value="7"></label>
+                        <p>(7)</p>
+                    </div>
+                    <div><label>Humor<input type="checkbox" name="genre" value="17"></label>
+                        <p>(17)</p>
+                    </div>
+                    <div><label>Psychologisch<input type="checkbox" name="genre" value="12"></label>
+                        <p>(12)</p>
+                    </div>
                 </div>
-
-                <div>
-                    <label>School <div>(10)</div><input type="checkbox" name="genre" value="10"></label>
-                    <label>Sociaal <div>(26)</div><input type="checkbox" name="genre" value="20"></label>
-                    <label>Sport <div>(4)</div><input type="checkbox" name="genre" value="4"></label>
-                    <label>Sprookjes <div>(7)</div><input type="checkbox" name="genre" value="7"></label>
-                    <label>Roman <div>(6)</div><input type="checkbox" name="genre" value="6"></label>
+                <button class="meerOpties">+ Meer opties</button>
+                <div class="tweedeGenre">
+                    <div><label>School<input type="checkbox" name="genre" value="10"></label>
+                        <p>(10)</p>
+                    </div>
+                    <div><label>Sociaal<input type="checkbox" name="genre" value="26"></label>
+                        <p>(26)</p>
+                    </div>
+                    <div><label>Sport<input type="checkbox" name="genre" value="4"></label>
+                        <p>(4)</p>
+                    </div>
+                    <div><label>Sprookjes <input type="checkbox" name="genre" value="7"></label>
+                        <p>(7)</p>
+                    </div>
+                    <div><label>Roman<input type="checkbox" name="genre" value="6"></label>
+                        <p>(6)</p>
+                    </div>
                 </div>
             </fieldset>
 
             <fieldset>
-                <legend>Leestijd</legend>
                 <div>
-                    <input type="range" min="1" max="100" value="50">
+                    <legend>Leestijd</legend>
+                    <p>3 min</p>
                 </div>
+                <div>
+                    <p>0 min</p>
+                    <p>5 min</p>
+                </div>
+                <input type="range" min="1" max="100" value="50">
             </fieldset>
 
             <fieldset>
@@ -126,7 +153,7 @@
         <h2>Resultaten 16</h2>
 
         <form>
-            <label>Sorteren
+            <label>Sorteren op
                 <select name="sorteren">
                     <option value="populair" selected>Populair</option>
                     <option value="nieuw">Nieuw</option>
