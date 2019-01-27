@@ -51,7 +51,7 @@ p {
 /*Navigatie*/
 header {
     display: flex;
-    width: 100%;
+    width: 100vw;
     text-align: center;
     background: #675c53;
     height: 2.5em;
@@ -88,6 +88,10 @@ header > form > input[placeholder=Zoeken] {
     visibility: hidden;
     width: 0;
 }
+header > form > input[placeholder=Zoeken]:focus {
+    visibility: visible;
+    width: 0;
+}
 
 header > form > img {
     margin-left: 0.5em;
@@ -103,6 +107,7 @@ header > nav a {
 header > nav > a span {
     visibility: hidden;
     width: 0;
+    height: 0;
 }
 
 header > nav > a > img {
@@ -214,6 +219,10 @@ form > fieldset > button {
     border: none;
     color: #54a5dd;
     text-decoration: underline;
+}
+
+form > fieldset > button:hover {
+    text-decoration: none;
 }
 
 
@@ -614,6 +623,10 @@ section > form > a {
     color: #54a5dd;
     display: block;
     margin-top: 1em;
+}
+
+section > form > a:hover {
+    text-decoration-line: none;
 }
 
 div + form > input[name=inloggen] {
@@ -1062,7 +1075,7 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
         margin-left: 1em;
     }
 
-    main {
+    section + section + main {
         display: grid;
         grid-column: 1/6;
         grid-template-columns: repeat(2, 1fr);
@@ -1085,7 +1098,6 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
 
     body > footer a {
         display: flex;
-        justify-content: flex-start;
         margin-left: 5%;
         grid-row-start: 2;
     }
@@ -1102,8 +1114,7 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
     }
 
     body > footer > div a {
-        width: 5em;
-        justify-content: flex-start;
+        width: 10em;
         padding: 0;
     }
 
@@ -1243,7 +1254,7 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
             grid-row-start: 2;
         }
 
-        main {
+        section + section + main {
             display: grid;
             grid-column: 1/6;
             grid-template-columns: repeat(3, 1fr);
@@ -1277,6 +1288,7 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
         main > img[src^="../images/Verhaal/Mobiel"] {
             visibility: hidden;
             width: 0;
+            height: 0;
         }
 
         main > img[src^="../images/Verhaal/desktop"] {
@@ -1288,5 +1300,6 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
         main > img[src^="../images/Verhaal/tablet"] {
             visibility: hidden;
             width: 0;
+            height: 0;
         }
     }
