@@ -37,6 +37,7 @@ if (optieKnop !== null) {
 
 
 
+
 /*Genre bij elkaar optellen*/
 var filterKnop = document.getElementsByName('filteren');
 var filterCheckboxes = document.getElementsByName('genre');
