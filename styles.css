@@ -90,6 +90,7 @@ header > form > input[placeholder=Zoeken] {
 }
 header > form > input[placeholder=Zoeken]:focus {
     visibility: visible;
+    border-bottom: 2px solid #fcd900;
     width: 0;
 }
 
@@ -183,6 +184,7 @@ form > fieldset > legend {
 
 form > fieldset {
     width: 100%;
+    height: auto;
     margin-bottom: 1em;
     border-bottom: 1px solid #8d857e;
 }
@@ -593,9 +595,17 @@ section > form > label {
     margin-bottom: 1em;
 }
 
+section > form > label > input:-webkit-autofill {
+    background: white;
+}
+
+/* Gele achtergrond label weg
+http://webagility.com/posts/the-ultimate-list-of-hacks-for-chromes-forced-yellow-background-on-autocompleted-inputs*/
 section > form > label > input[type^="email"] {
     width: 100%;
     height: 2em;
+    background-color: white;
+    -webkit-box-shadow: 0 0 0 100px white inset;
     border: none;
     margin-bottom: 2em;
     margin-top: 1em;
@@ -603,12 +613,15 @@ section > form > label > input[type^="email"] {
 }
 
 section > form > label > input[type^="email"]:focus {
-    border-bottom: 1px solid #fcd900;
+    border-bottom: 2px solid #fcd900;
+    background: white;
 }
 
 section > form > label > input[type^="password"] {
     width: 100%;
     height: 2em;
+    background-color: white;
+    -webkit-box-shadow: 0 0 0 100px white inset;
     border: none;
     margin-top: 1em;
     margin-bottom: 2em;
@@ -616,7 +629,8 @@ section > form > label > input[type^="password"] {
 }
 
 section > form > label > input[type^="password"]:focus {
-    border-bottom: 1px solid #fcd900;
+    border-bottom: 2px solid #fcd900;
+    background: white;
 }
 
 section > form > a {
@@ -896,8 +910,10 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
 .tweedeGenre {
     visibility: hidden;
     height: 0;
+    position: absolute;
 }
 .zichtbaarOpties {
+    position: relative;
     background: white;
     height: auto;
     visibility: visible;
@@ -936,6 +952,9 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
         border: none;
         border-radius: 0em 0em 0em 0em;
         box-shadow: 0;
+    }
+    header > form > input[placeholder=Zoeken]:focus {
+        border-bottom: 2px solid #fcd900;
     }
 
     header > form > input::placeholder {
@@ -999,7 +1018,7 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
 
     section > div > div {
         width: 100%;
-        height: 25%;
+        height: 25vh;
         border-radius: 1em 1em 1em 1em;
     }
 
@@ -1226,6 +1245,7 @@ main > div > form > img + fieldset > label > input[type^="radio"] {
             visibility: visible;
             margin-top: -1.5em;
             transition: 0s;
+            position: relative;
         }
 
         section > form > fieldset > div {
